@@ -1,0 +1,1955 @@
+/* ==========================================================
+   GOOGLE FONTS
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Dancing+Script:wght@700&display=swap');
+
+/* ==========================================================
+   VARIÁVEIS
+========================================================== */
+
+:root{
+
+    --bg:#08120F;
+    --bg-light:#10211C;
+
+    --emerald:#2D6A4F;
+    --emerald-light:#3F8A67;
+
+    --marsala:#7C294F;
+    --marsala-light:#A63D67;
+
+    --gold:#F5D78E;
+    --gold-light:#FFE7B2;
+
+    --white:#FFFFFF;
+
+    --text:#F5F5F5;
+    --text-soft:#D8D8D8;
+
+    --glass:rgba(255,255,255,.08);
+    --glass-hover:rgba(255,255,255,.12);
+
+    --border:rgba(255,255,255,.12);
+
+    --shadow:
+
+        0 20px 60px rgba(0,0,0,.30);
+
+    --radius:28px;
+
+    --transition:.35s ease;
+
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    background:
+
+        radial-gradient(circle at top left,
+        rgba(45,106,79,.30),
+        transparent 35%),
+
+        radial-gradient(circle at bottom right,
+        rgba(124,41,79,.28),
+        transparent 40%),
+
+        linear-gradient(
+            145deg,
+            var(--bg),
+            var(--bg-light)
+        );
+
+}
+
+/* ==========================================================
+   SELEÇÃO
+========================================================== */
+
+::selection{
+
+    background:var(--gold);
+
+    color:#222;
+
+}
+
+::-moz-selection{
+
+    background:var(--gold);
+
+    color:#222;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==========================================================
+   IMAGENS
+========================================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+    user-select:none;
+
+}
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-10;
+
+}
+
+/* ==========================================================
+   AURORA 1
+========================================================== */
+
+.gradient.one{
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    left:-220px;
+    top:-220px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(45,106,79,.40),
+
+            transparent 70%
+
+        );
+
+    filter:blur(60px);
+
+    animation:
+
+        moveOne 18s ease-in-out infinite alternate;
+
+}
+
+/* ==========================================================
+   AURORA 2
+========================================================== */
+
+.gradient.two{
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    right:-180px;
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(124,41,79,.35),
+
+            transparent 70%
+
+        );
+
+    filter:blur(70px);
+
+    animation:
+
+        moveTwo 20s ease-in-out infinite alternate;
+
+}
+
+/* ==========================================================
+   ESTRELAS
+========================================================== */
+
+.stars{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        radial-gradient(white 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    opacity:.08;
+
+}
+
+/* ==========================================================
+   PARTÍCULAS
+========================================================== */
+
+.particles{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        radial-gradient(
+
+            rgba(255,255,255,.18) 1px,
+
+            transparent 1px
+
+        );
+
+    background-size:160px 160px;
+
+    opacity:.15;
+
+    animation:
+
+        particlesMove 35s linear infinite;
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+    padding:
+
+        70px 0 90px;
+
+}
+
+/* ==========================================================
+   GLASS BASE
+========================================================== */
+
+.hero,
+.counter,
+.quote,
+.menu-card,
+.love-card{
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================================================
+   ANIMAÇÕES
+========================================================== */
+
+@keyframes moveOne{
+
+    from{
+
+        transform:
+
+            translate(0,0)
+
+            scale(1);
+
+    }
+
+    to{
+
+        transform:
+
+            translate(80px,60px)
+
+            scale(1.15);
+
+    }
+
+}
+
+@keyframes moveTwo{
+
+    from{
+
+        transform:
+
+            translate(0,0)
+
+            scale(1);
+
+    }
+
+    to{
+
+        transform:
+
+            translate(-60px,-80px)
+
+            scale(1.10);
+
+    }
+
+}
+
+@keyframes particlesMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-180px);
+
+    }
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08120F;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+
+        linear-gradient(
+
+            var(--emerald),
+
+            var(--marsala)
+
+        );
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:
+
+        linear-gradient(
+
+            var(--emerald-light),
+
+            var(--marsala-light)
+
+        );
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:60px 45px;
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    top:-140px;
+    right:-100px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(245,215,142,.15),
+            transparent 70%
+        );
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    bottom:-120px;
+    left:-120px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(45,106,79,.18),
+            transparent 70%
+        );
+
+}
+
+/* ==========================================================
+   BADGE
+========================================================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 22px;
+
+    margin-bottom:28px;
+
+    border-radius:999px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    color:var(--gold);
+
+    border:1px solid rgba(245,215,142,.25);
+
+    background:rgba(245,215,142,.08);
+
+    backdrop-filter:blur(10px);
+
+}
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.hero h1{
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:clamp(3.2rem,8vw,5.5rem);
+
+    color:var(--gold);
+
+    line-height:1;
+
+    margin-bottom:18px;
+
+    text-shadow:
+
+        0 8px 30px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================================
+   SUBTÍTULO
+========================================================== */
+
+.subtitle{
+
+    width:min(700px,100%);
+
+    margin:auto;
+
+    color:var(--text-soft);
+
+    font-size:1.12rem;
+
+    line-height:1.9;
+
+}
+
+/* ==========================================================
+   CONTADOR
+========================================================== */
+
+.counter{
+
+    padding:40px;
+
+    margin-bottom:35px;
+
+}
+
+.counter h2{
+
+    text-align:center;
+
+    font-size:1.8rem;
+
+    margin-bottom:35px;
+
+    color:var(--gold);
+
+}
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.time{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:20px;
+
+}
+
+/* ==========================================================
+   BOX
+========================================================== */
+
+.box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:28px 18px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.05);
+
+    transition:var(--transition);
+
+}
+
+.box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.05),
+            transparent
+        );
+
+    pointer-events:none;
+
+}
+
+.box:hover{
+
+    transform:
+
+        translateY(-8px);
+
+    background:var(--glass-hover);
+
+    border-color:rgba(245,215,142,.25);
+
+}
+
+/* ==========================================================
+   NÚMEROS
+========================================================== */
+
+.box span{
+
+    display:block;
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================================================
+   TEXTO
+========================================================== */
+
+.box small{
+
+    color:var(--text-soft);
+
+    text-transform:uppercase;
+
+    font-size:.78rem;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================================
+   FRASE
+========================================================== */
+
+.quote{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    margin-bottom:45px;
+
+    text-align:center;
+
+}
+
+.quote::before{
+
+    content:"“";
+
+    position:absolute;
+
+    left:25px;
+
+    top:-20px;
+
+    font-size:120px;
+
+    color:rgba(245,215,142,.08);
+
+    font-family:serif;
+
+}
+
+.quote p{
+
+    width:min(760px,100%);
+
+    margin:auto;
+
+    font-size:1.2rem;
+
+    line-height:2;
+
+    color:var(--gold-light);
+
+    font-style:italic;
+
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media(max-width:1000px){
+
+    .time{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    .hero{
+
+        padding:40px 25px;
+
+    }
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .counter{
+
+        padding:25px;
+
+    }
+
+    .counter h2{
+
+        font-size:1.4rem;
+
+    }
+
+    .time{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+    .box{
+
+        padding:20px 12px;
+
+    }
+
+    .box span{
+
+        font-size:2rem;
+
+    }
+
+    .quote{
+
+        padding:25px;
+
+    }
+
+    .quote p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.menu{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:26px;
+
+    margin-bottom:70px;
+
+}
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.menu-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:250px;
+
+    padding:35px 28px;
+
+    border-radius:30px;
+
+    transition:all .45s ease;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.08),
+            rgba(255,255,255,.04)
+        );
+
+    border:1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+
+        0 18px 45px rgba(0,0,0,.22);
+
+    isolation:isolate;
+
+}
+
+/* ==========================================================
+   BRILHO
+========================================================== */
+
+.menu-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-50%;
+
+    width:60%;
+
+    height:260%;
+
+    transform:rotate(28deg);
+
+    background:
+
+        linear-gradient(
+
+            transparent,
+
+            rgba(255,255,255,.22),
+
+            transparent
+
+        );
+
+    transition:1s;
+
+}
+
+.menu-card:hover::before{
+
+    left:130%;
+
+}
+
+/* brilho inferior */
+
+.menu-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:
+
+        radial-gradient(
+
+            circle at bottom,
+
+            rgba(245,215,142,.08),
+
+            transparent 70%
+
+        );
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.menu-card:hover{
+
+    transform:
+
+        translateY(-12px)
+
+        scale(1.03);
+
+    border-color:
+
+        rgba(245,215,142,.35);
+
+    box-shadow:
+
+        0 28px 60px rgba(0,0,0,.30);
+
+}
+
+/* ==========================================================
+   ÍCONE
+========================================================== */
+
+.menu-card .icon{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:90px;
+
+    height:90px;
+
+    margin-bottom:25px;
+
+    border-radius:24px;
+
+    font-size:42px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(45,106,79,.28),
+
+            rgba(124,41,79,.28)
+
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+}
+
+.menu-card:hover .icon{
+
+    transform:
+
+        scale(1.15)
+
+        rotate(-8deg);
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(45,106,79,.55),
+
+            rgba(124,41,79,.55)
+
+        );
+
+}
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.menu-card h3{
+
+    color:var(--gold);
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================================================
+   DESCRIÇÃO
+========================================================== */
+
+.menu-card p{
+
+    color:var(--text-soft);
+
+    font-size:.97rem;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   BORDA LUMINOSA
+========================================================== */
+
+.menu-card:hover{
+
+    outline:1px solid rgba(245,215,142,.15);
+
+}
+
+/* ==========================================================
+   EFEITO CLIQUE
+========================================================== */
+
+.menu-card:active{
+
+    transform:
+
+        scale(.98);
+
+}
+
+/* ==========================================================
+   CORES DIFERENTES
+========================================================== */
+
+.menu-card:nth-child(1) .icon{
+
+    background:linear-gradient(135deg,#A63D67,#7C294F);
+
+}
+
+.menu-card:nth-child(2) .icon{
+
+    background:linear-gradient(135deg,#2D6A4F,#4E9C74);
+
+}
+
+.menu-card:nth-child(3) .icon{
+
+    background:linear-gradient(135deg,#7C294F,#4B244E);
+
+}
+
+.menu-card:nth-child(4) .icon{
+
+    background:linear-gradient(135deg,#3F8A67,#2D6A4F);
+
+}
+
+.menu-card:nth-child(5) .icon{
+
+    background:linear-gradient(135deg,#A67B3D,#F5D78E);
+
+}
+
+.menu-card:nth-child(6) .icon{
+
+    background:linear-gradient(135deg,#4E9C74,#2D6A4F);
+
+}
+
+.menu-card:nth-child(7) .icon{
+
+    background:linear-gradient(135deg,#B44A74,#7C294F);
+
+}
+
+.menu-card:nth-child(8) .icon{
+
+    background:linear-gradient(135deg,#3A7D63,#2D6A4F);
+
+}
+
+.menu-card:nth-child(9) .icon{
+
+    background:linear-gradient(135deg,#91516D,#7C294F);
+
+}
+
+.menu-card:nth-child(10) .icon{
+
+    background:linear-gradient(135deg,#3D8768,#2D6A4F);
+
+}
+
+.menu-card:nth-child(11) .icon{
+
+    background:linear-gradient(135deg,#A67B3D,#D8B45C);
+
+}
+
+.menu-card:nth-child(12) .icon{
+
+    background:linear-gradient(135deg,#B54B77,#8A2E59);
+
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media(max-width:900px){
+
+    .menu{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .menu{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .menu-card{
+
+        min-height:210px;
+
+        padding:28px 22px;
+
+    }
+
+    .menu-card .icon{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:36px;
+
+        margin-bottom:18px;
+
+    }
+
+    .menu-card h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .menu-card p{
+
+        font-size:.92rem;
+
+    }
+
+}
+
+/* ==========================================================
+   LOVE MESSAGE
+========================================================== */
+
+.love-message{
+
+    margin-top:10px;
+
+    margin-bottom:70px;
+
+}
+
+/* ==========================================================
+   LOVE CARD
+========================================================== */
+
+.love-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:60px 50px;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+}
+
+.love-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+        0 35px 80px rgba(0,0,0,.35);
+
+}
+
+/* brilho superior */
+
+.love-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-160px;
+
+    right:-120px;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(245,215,142,.12),
+
+            transparent 70%
+
+        );
+
+}
+
+/* brilho inferior */
+
+.love-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-140px;
+
+    left:-140px;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(45,106,79,.12),
+
+            transparent 70%
+
+        );
+
+}
+
+/* ==========================================================
+   CORAÇÃO
+========================================================== */
+
+.heart{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:90px;
+
+    height:90px;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    font-size:42px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            var(--marsala),
+
+            var(--emerald)
+
+        );
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.25);
+
+    animation:heartbeat 2.5s infinite;
+
+}
+
+/* ==========================================================
+   TÍTULO
+========================================================== */
+
+.love-card h2{
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:3rem;
+
+    color:var(--gold);
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================================
+   TEXTO
+========================================================== */
+
+.love-card p{
+
+    width:min(760px,100%);
+
+    margin:0 auto 20px;
+
+    color:var(--text-soft);
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================================================
+   ASSINATURA
+========================================================== */
+
+.signature{
+
+    margin-top:40px;
+
+}
+
+.signature span{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--gold-light);
+
+    font-style:italic;
+
+}
+
+.signature strong{
+
+    font-family:"Dancing Script",cursive;
+
+    font-size:2.4rem;
+
+    color:var(--gold);
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    margin-top:60px;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ==========================================================
+   CORAÇÃO FOOTER
+========================================================== */
+
+.footer-heart{
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+    animation:heartbeat 2.5s infinite;
+
+}
+
+/* ==========================================================
+   TEXTO FOOTER
+========================================================== */
+
+footer p{
+
+    max-width:760px;
+
+    margin:0 auto 18px;
+
+    color:var(--text-soft);
+
+    line-height:2;
+
+    font-size:1rem;
+
+}
+
+/* ==========================================================
+   COPYRIGHT
+========================================================== */
+
+footer span{
+
+    color:rgba(255,255,255,.45);
+
+    font-size:.9rem;
+
+}
+
+/* ==========================================================
+   ANIMAÇÕES
+========================================================== */
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    15%{
+
+        transform:scale(1.12);
+
+    }
+
+    30%{
+
+        transform:scale(1);
+
+    }
+
+    45%{
+
+        transform:scale(1.08);
+
+    }
+
+    60%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVO
+========================================================== */
+
+@media(max-width:900px){
+
+    .love-card{
+
+        padding:45px 30px;
+
+    }
+
+    .love-card h2{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .love-message{
+
+        margin-bottom:50px;
+
+    }
+
+    .love-card{
+
+        padding:35px 22px;
+
+    }
+
+    .heart{
+
+        width:75px;
+
+        height:75px;
+
+        font-size:34px;
+
+    }
+
+    .love-card h2{
+
+        font-size:2rem;
+
+    }
+
+    .love-card p{
+
+        font-size:.95rem;
+
+        line-height:1.8;
+
+    }
+
+    .signature strong{
+
+        font-size:2rem;
+
+    }
+
+    footer{
+
+        margin-top:40px;
+
+        padding:30px 15px;
+
+    }
+
+}
+
+/* ==========================================================
+   EFEITOS GERAIS
+========================================================== */
+
+.hero,
+.counter,
+.quote,
+.menu-card,
+.love-card{
+
+    transition:
+
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease,
+        background .35s ease;
+
+}
+
+.hero:hover,
+.counter:hover,
+.quote:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.28);
+
+}
+
+/* ==========================================================
+   BRILHO SUAVE
+========================================================== */
+
+.hero::after,
+.counter::after,
+.quote::after,
+.love-card::after{
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   ANIMAÇÃO DOS ÍCONES
+========================================================== */
+
+.menu-card:hover .icon{
+
+    animation:iconFloat .8s ease;
+
+}
+
+@keyframes iconFloat{
+
+    0%{
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+    30%{
+
+        transform:
+            translateY(-10px)
+            scale(1.12);
+
+    }
+
+    60%{
+
+        transform:
+            translateY(3px)
+            scale(1.08);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0)
+            scale(1.15);
+
+    }
+
+}
+
+/* ==========================================================
+   TÍTULOS
+========================================================== */
+
+.hero h1,
+.counter h2,
+.love-card h2{
+
+    text-wrap:balance;
+
+}
+
+.subtitle,
+.quote p,
+.love-card p,
+footer p{
+
+    text-wrap:pretty;
+
+}
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+.menu-card:focus-visible{
+
+    outline:3px solid var(--gold);
+
+    outline-offset:5px;
+
+}
+
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+/* ==========================================================
+   SCROLLBAR MODERNA
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08120F;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            var(--emerald),
+
+            var(--marsala)
+
+        );
+
+    border-radius:999px;
+
+    border:3px solid #08120F;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            var(--emerald-light),
+
+            var(--marsala-light)
+
+        );
+
+}
+
+/* Firefox */
+
+*{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:
+
+        var(--emerald)
+
+        #08120F;
+
+}
+
+/* ==========================================================
+   RESPONSIVO EXTRA
+========================================================== */
+
+@media(max-width:480px){
+
+    .container{
+
+        width:94%;
+
+        padding:35px 0 60px;
+
+    }
+
+    .badge{
+
+        font-size:.8rem;
+
+        padding:8px 18px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.92rem;
+
+    }
+
+    .counter{
+
+        padding:18px;
+
+    }
+
+    .time{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+
+    }
+
+    .box{
+
+        padding:16px 10px;
+
+    }
+
+    .box span{
+
+        font-size:1.8rem;
+
+    }
+
+    .quote{
+
+        padding:22px 18px;
+
+    }
+
+    .quote p{
+
+        font-size:.95rem;
+
+    }
+
+    .menu{
+
+        gap:16px;
+
+    }
+
+    .menu-card{
+
+        min-height:190px;
+
+        padding:24px 18px;
+
+    }
+
+    .menu-card .icon{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:32px;
+
+    }
+
+    .love-card{
+
+        padding:28px 18px;
+
+    }
+
+}
+
+/* ==========================================================
+   TELAS GRANDES
+========================================================== */
+
+@media(min-width:1500px){
+
+    .container{
+
+        max-width:1400px;
+
+    }
+
+    .menu{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+}
+
+/* ==========================================================
+   FIM DO CSS
+========================================================== */
